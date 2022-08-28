@@ -5,10 +5,10 @@ const inquirer = require("inquirer");
 const Engineer = require("./employees/engineer");
 const Intern = require("./employees/intern");
 const Manager = require("./employees/intern");
-const generateMarkdown = require("./utils/generateMarkdown");
+// const generateMarkdown = require("./utils/generateMarkdown");
 const writeFileAsync = util.promisify(fs.writeFile);
 
-//User questions
+//manager? prompt
 function manager() {
   return inquirer.prompt([
     {
@@ -34,6 +34,7 @@ function manager() {
   ]);
 }
 
+//intern? prompt
 function intern() {
     return inquirer.prompt([
       {
@@ -59,6 +60,7 @@ function intern() {
     ]);
   }
 
+  //engineer? prompt
   function engineer() {
     return inquirer.prompt([
       {
