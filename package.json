@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kalebritt/profile-generator-mod10/issues"
   },
-  "homepage": "https://github.com/kalebritt/profile-generator-mod10#readme"
+  "homepage": "https://github.com/kalebritt/profile-generator-mod10#readme",
+  "dependencies": {
+    "inquirer": "^9.1.0"
+  },
+  "devDependencies": {}
 }
