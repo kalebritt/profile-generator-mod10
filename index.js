@@ -127,8 +127,14 @@ function addIntern() {
         name: "engineerOfficeNumber",
         message: "And what is the office # of the Engineer?",
       },
-    ]);
-  }
+
+    ]).then(answers => {
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmailAddress, answers.engineerOfficeNumber);
+        teamArray.push(engineer);
+        createTeam();
+      });
+    
+    };
 
 
 // pomisify
