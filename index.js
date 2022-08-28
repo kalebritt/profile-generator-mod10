@@ -41,7 +41,7 @@ function runApp () {
 
 
 //manager? prompt
-function manager() {
+function addManager() {
   return inquirer.prompt([
     {
       type: "input",
@@ -63,7 +63,7 @@ function manager() {
       name: "managerOfficeNumber",
       message: "And what is the office # of the Manager",
     },
-    
+
 ]).then(answers => {
     const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmailAddress, answers.managerOfficeNumber);
     teamArray.push(manager);
@@ -73,7 +73,7 @@ function manager() {
 };
 
 //intern? prompt
-function intern() {
+function addIntern() {
     return inquirer.prompt([
       {
         type: "input",
@@ -95,11 +95,17 @@ function intern() {
         name: "internOfficeNumber",
         message: "And what is the office # of the Intern",
       },
-    ]);
-  }
+
+    ]).then(answers => {
+        const intern = new Intern(answers.interName, answers.internId, answers.internEmailAddress, answers.internOfficeNumber);
+        teamArray.push(intern);
+        createTeam();
+      });
+    
+    };
 
   //engineer? prompt
-  function engineer() {
+  function addEngineer() {
     return inquirer.prompt([
       {
         type: "input",
