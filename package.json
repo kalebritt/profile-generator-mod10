@@ -18,6 +18,5 @@
   "homepage": "https://github.com/kalebritt/profile-generator-mod10#readme",
   "dependencies": {
     "inquirer": "^9.1.0"
-  },
-  "devDependencies": {}
+  }
 }

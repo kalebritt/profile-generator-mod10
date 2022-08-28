@@ -1,12 +1,12 @@
 // Variables and dependancies
-const fs = require("fs");
-const util = require("util");
-const inquirer = require("inquirer");
+// const fs = require("fs");
+// const util = require("util");
+// const inquirer = require("inquirer");
 const Engineer = require("./employees/engineer");
 const Intern = require("./employees/intern");
 const Manager = require("./employees/intern");
 // const generateMarkdown = require("./utils/generateMarkdown");
-const writeFileAsync = util.promisify(fs.writeFile);
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 
 teamArray = [];
@@ -138,17 +138,17 @@ function addIntern() {
 
 
 // pomisify
-async function init() {
-  try {
-    // questions and responses
-    const answers = await promptUser();
-    const generateContent = generateMarkdown(answers);
-    // New readme
-    await writeFileAsync("README.md", generateContent);
-    console.log("Success");
-  } catch (err) {
-    console.log(err);
-  }
-}
+// async function init() {
+//   try {
+//     // questions and responses
+//     const answers = await promptUser();
+//     const generateContent = generateMarkdown(answers);
+//     // New readme
+//     await writeFileAsync("README.md", generateContent);
+//     console.log("Success");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
-init();
+// init();
