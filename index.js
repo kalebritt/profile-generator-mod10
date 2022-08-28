@@ -59,6 +59,31 @@ function intern() {
     ]);
   }
 
+  function engineer() {
+    return inquirer.prompt([
+      {
+        type: "input",
+        name: "engineerName",
+        message: "What is the name of the Engineer?",
+      },
+      {
+        type: "input",
+        name: "engineerId",
+        message: "What is the ID # of the Engineer? ",
+      },
+      {
+        type: "input",
+        name: "engineerEmailAddress",
+        message: "What is the email address of the Engineer? ",
+      },
+      {
+        type: "input",
+        name: "engineerOfficeNumber",
+        message: "And what is the office # of the Engineer?",
+      },
+    ]);
+  }
+
 
 // pomisify
 async function init() {
