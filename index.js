@@ -34,6 +34,31 @@ function manager() {
   ]);
 }
 
+function intern() {
+    return inquirer.prompt([
+      {
+        type: "input",
+        name: "internName",
+        message: "What is the name of the Intern?",
+      },
+      {
+        type: "input",
+        name: "internId",
+        message: "What is the ID # of the Intern? ",
+      },
+      {
+        type: "input",
+        name: "internEmailAddress",
+        message: "What is the email address of the Intern? ",
+      },
+      {
+        type: "input",
+        name: "internOfficeNumber",
+        message: "And what is the office # of the Intern",
+      },
+    ]);
+  }
+
 
 // pomisify
 async function init() {
