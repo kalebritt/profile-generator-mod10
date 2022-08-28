@@ -2,11 +2,10 @@
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
-const Engineer = require("./employees/engineer");
-const Intern = require("./employees/intern");
-const Manager = require("./employees/intern");
-const generateHtml = require("./utils/employ.html");
-const writeFileAsync = util.promisify(fs.writeFile);
+const Engineer = require("./employees/engineer.js");
+const Intern = require("./employees/intern.js");
+const Manager = require("./employees/manager");
+// const generateHtml = require("./utils/employ");
 
 
 teamArray = [];
@@ -137,18 +136,31 @@ function addIntern() {
     };
 
 
-pomisify
-async function init() {
-  try {
-    // questions and responses
-    const answers = await promptUser();
-    const generateContent = generateHtml(answers);
-    // New readme
-    await writeFileAsync("./utils/employ.html", generateContent);
-    console.log("Success");
-  } catch (err) {
-    console.log(err);
-  }
-}
+    function htmlBuilder () {
+        console.log("Team created!")
+    
+        fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
+    
+    }
+    
+    createTeam();
+    
+    
+    
+    runApp();
 
-init();
+// pomisify
+// async function init() {
+//   try {
+//     // questions and responses
+//     const answers = await promptUser();
+//     const generateContent = generateHtml(answers);
+//     // New readme
+//     await writeFileAsync("./utils/employ.html", generateContent);
+//     console.log("Success");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// init();
