@@ -1,79 +1,90 @@
 // Variables and dependancies
 const fs = require("fs");
-const util = require("util");
+const path = require("path");
 const inquirer = require("inquirer");
-const Engineer = require("./lib/engineer.js.js");
-const Intern = require("./lib/intern.js.js");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-// const generateHtml = require("./utils/employ");
+const generateTeam = require("./src/generateTeam");
+
+const teamArray = [];
 
 
-employeeArray = [];
+  function createTeam() {
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          message: "What type of employee would you like to add to your team?",
+          name: "addEmployeePrompt",
+          choices: [
+            "Manager",
+            "Engineer",
+            "Intern",
+            "No more team members are needed.",
+          ],
+        },
+      ])
+      .then(function (userInput) {
+        switch (userInput.addEmployeePrompt) {
+          case "Manager":
+            addManager();
+            break;
+          case "Engineer":
+            addEngineer();
+            break;
+          case "Intern":
+            addIntern();
+            break;
 
-
-
-function runApp () {
-
-  function createTeam () {
-    inquirer.prompt([{
-      type: "list",
-      message: "What type of employee would you like to add to your team?",
-      name: "addEmployeePrompt",
-      choices: ["Manager", "Engineer", "Intern", "No more team members are needed."]
-    }]).then(function (userInput) {
-      switch(userInput.addEmployeePrompt) {
-        case "Manager":
-          addManager();
-          break;
-        case "Engineer":
-          addEngineer();
-          break;
-        case "Intern":
-          addIntern();
-          break;
-
-        default:
-          htmlBuilder();
-      }
-    })
-  }};
+          default:
+            htmlBuilder();
+        }
+      });
+  }
 
 
 //manager? prompt
 function addManager() {
-  return inquirer.prompt([
-    {
-      type: "input",
-      name: "managerName",
-      message: "What is the name of the Manager?",
-    },
-    {
-      type: "input",
-      name: "managerId",
-      message: "What is the ID # of the Manager? ",
-    },
-    {
-      type: "input",
-      name: "managerEmailAddress",
-      message: "What is the email address of the Manager? ",
-    },
-    {
-      type: "input",
-      name: "managerOfficeNumber",
-      message: "And what is the office # of the Manager",
-    },
-
-]).then(answers => {
-    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmailAddress, answers.managerOfficeNumber);
-    teamArray.push(manager);
-    createTeam();
-  });
-
-};
+  return inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "managerName",
+        message: "What is the name of the Manager?",
+      },
+      {
+        type: "input",
+        name: "managerId",
+        message: "What is the ID # of the Manager? ",
+      },
+      {
+        type: "input",
+        name: "managerEmailAddress",
+        message: "What is the email address of the Manager? ",
+      },
+      {
+        type: "input",
+        name: "managerOfficeNumber",
+        message: "And what is the office # of the Manager",
+      },
+    ])
+    .then((answers) => {
+      const manager = new Manager(
+        answers.managerName,
+        answers.managerId,
+        answers.managerEmailAddress,
+        answers.managerOfficeNumber
+      );
+      teamArray.push(manager);
+      createTeam();
+    });
+}
 
 //intern? prompt
 function addIntern() {
-    return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "input",
         name: "internName",
@@ -91,21 +102,26 @@ function addIntern() {
       },
       {
         type: "input",
-        name: "internOfficeNumber",
-        message: "And what is the office # of the Intern",
+        name: "schoolName",
+        message: "Where did the Intern go to school?",
       },
+    ])
+    .then((answers) => {
+      const intern = new Intern(
+        answers.interName,
+        answers.internId,
+        answers.internEmailAddress,
+        answers.schoolName
+      );
+      teamArray.push(intern);
+      createTeam();
+    });
+}
 
-    ]).then(answers => {
-        const intern = new Intern(answers.interName, answers.internId, answers.internEmailAddress, answers.internOfficeNumber);
-        teamArray.push(intern);
-        createTeam();
-      });
-    
-    };
-
-  //engineer? prompt
-  function addEngineer() {
-    return inquirer.prompt([
+//engineer? prompt
+function addEngineer() {
+  return inquirer
+    .prompt([
       {
         type: "input",
         name: "engineerName",
@@ -123,31 +139,34 @@ function addIntern() {
       },
       {
         type: "input",
-        name: "engineerOfficeNumber",
-        message: "And what is the office # of the Engineer?",
+        name: "githubAddress",
+        message: "What is the Engineer's GitHub?",
       },
+    ])
+    .then((answers) => {
+      const engineer = new Engineer(
+        answers.engineerName,
+        answers.engineerId,
+        answers.engineerEmailAddress,
+        answers.githubAddress,
+      );
+      teamArray.push(engineer);
+      createTeam();
+    });
+}
+ 
+const distFolder = path.resolve(__dirname, "dist");
+const distPath = path.join(distFolder, 'employ.html')
+function htmlBuilder() {
+  console.log("Team created!");
 
-    ]).then(answers => {
-        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmailAddress, answers.engineerOfficeNumber);
-        teamArray.push(engineer);
-        createTeam();
-      });
-    
-    };
+  fs.writeFileSync(distPath, generateTeam(teamArray), "UTF-8");
+}
 
 
-    function htmlBuilder () {
-        console.log("Team created!")
-    
-        fs.writeFileSync("./utils/team.js", generateTeam(employeeArray), "UTF-8")
-    
-    }
-    
-    createTeam();
-    
-    
-    
-    runApp();
+
+
+createTeam();
 
 // pomisify
 // async function init() {
