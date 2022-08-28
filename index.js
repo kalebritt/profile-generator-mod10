@@ -2,9 +2,9 @@
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
-const Engineer = require("./employees/engineer.js");
-const Intern = require("./employees/intern.js");
-const Manager = require("./employees/manager");
+const Engineer = require("./lib/engineer.js.js");
+const Intern = require("./lib/intern.js.js");
+const Manager = require("./lib/Manager");
 // const generateHtml = require("./utils/employ");
 
 
