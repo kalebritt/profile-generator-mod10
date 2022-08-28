@@ -9,7 +9,7 @@ const generateMarkdown = require("./utils/generateMarkdown")
 const writeFileAsync = util.promisify(fs.writeFile);
 
 //User questions
-function promptUser(){
+function manager(){
     return inquirer.prompt([
         {
             type: "input",
@@ -31,47 +31,35 @@ function promptUser(){
             name: "usage",
             message: "What is the intention of the project?"
         },
-        {
-            type: "list",
-            name: "license",
-            message: "Chose the appropriate license for this project: ",
-            choices: [
-                "Apache",
-                "Academic",
-                "GNU",
-                "ISC",
-                "MIT",
-                "Mozilla",
-                "Open"
-            ]
-        },
-        {
-            type: "input",
-            name: "contributing",
-            message: "Who else contibuted to the project?"
-        },
-        {
-            type: "input",
-            name: "tests",
-            message: "Is it possible to test the project?"
-        },
-        {
-            type: "input",
-            name: "questions",
-            message: "How can I fix any issues with the project? "
-        },
-        {
-            type: "input",
-            name: "username",
-            message: "Please enter your GitHub username: "
-        },
-        {
-            type: "input",
-            name: "email",
-            message: "Please enter your email: "
-        }
+        
     ]);
+    function intern(){
+        return inquirer.prompt([
+            {
+                type: "input",
+                name: "managerName",
+                message: "What is the name of the Manager?",
+            },
+            {
+                type: "input",
+                name: "managerId",
+                message: "What is the ID # of the Manager? "
+            },
+            {
+                type: "input",
+                name: "managerEmailAddress",
+                message: "What is the email address of the Manager? ",
+            },
+            {
+                type: "input",
+                name: "managerOfficeNumber",
+                message: "And what is the office # of the Manager"
+            },
+            
+        ]);
 } 
+
+
 
 // pomisify 
   async function init() {
