@@ -63,8 +63,14 @@ function manager() {
       name: "managerOfficeNumber",
       message: "And what is the office # of the Manager",
     },
-  ]);
-}
+    
+]).then(answers => {
+    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmailAddress, answers.managerOfficeNumber);
+    teamArray.push(manager);
+    createTeam();
+  });
+
+};
 
 //intern? prompt
 function intern() {
