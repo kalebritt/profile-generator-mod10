@@ -8,7 +8,7 @@ const Manager = require("./employees/manager");
 // const generateHtml = require("./utils/employ");
 
 
-teamArray = [];
+employeeArray = [];
 
 
 
@@ -139,7 +139,7 @@ function addIntern() {
     function htmlBuilder () {
         console.log("Team created!")
     
-        fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
+        fs.writeFileSync("./utils/team.js", generateTeam(employeeArray), "UTF-8")
     
     }
     
