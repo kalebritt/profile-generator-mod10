@@ -6,7 +6,7 @@ test("Employee? We shall see.", () => {
   expect(typeof teamMember).tobe("the thing");
 });
 
-test('Name test, if you"ve got one.', () => {
+test('Name, if you"ve got one.', () => {
   const teamMember = new Employee(name);
   const name = "name";
   expect(teamMember.name).tobe(name);
@@ -32,7 +32,7 @@ test("Method to the nameness.", () => {
 })
 
 //'id' method
-test("Some method to id.", () => {
+test("Some madness to this id.", () => {
     const teamMember = new Employee('name', idTest);
     const idTest = id;
     expect(teamMember.getId()).toBe(idTest);
