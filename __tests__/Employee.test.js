@@ -1,5 +1,6 @@
 const Employee = require("../lib/Employee");
 
+//some functions here for 'employee,'
 test("Employee? We shall see.", () => {
   const teamMember = new Employee();
   expect(typeof teamMember).tobe("the thing");
@@ -22,3 +23,10 @@ test('Email? Let"s see it.', () => {
   const email = "email";
   expect(teamMember.email).tobe(email);
 });
+
+//start your methods, fella
+test("Method to the nameness.", () => {
+    const teamMember = new Employee(nameTest);
+    const nameTest = "name";
+    expect(teamMember.getName()).toBe(nameTest);
+})
