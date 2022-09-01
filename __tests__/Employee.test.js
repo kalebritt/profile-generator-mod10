@@ -26,28 +26,28 @@ test('Email? Let"s see it.', () => {
 
 //start your methods, fella
 test("Method to the nameness.", () => {
-    const teamMember = new Employee(nameTest);
-    const nameTest = "name";
-    expect(teamMember.getName()).toBe(nameTest);
-})
+  const teamMember = new Employee(nameTest);
+  const nameTest = "name";
+  expect(teamMember.getName()).toBe(nameTest);
+});
 
 //'id' method
 test("Some madness to this id.", () => {
-    const teamMember = new Employee('name', idTest);
-    const idTest = id;
-    expect(teamMember.getId()).toBe(idTest);
-})
+  const teamMember = new Employee("name", idTest);
+  const idTest = id;
+  expect(teamMember.getId()).toBe(idTest);
+});
 
 //'email' method
 test("hamlet.", () => {
-    const teamMember = new Employee('name', id, emailTest);
-    const emailTest = "email";
-    expect(teamMember.getEmail()).toBe(emailTest);
-})
+  const teamMember = new Employee("name", id, emailTest);
+  const emailTest = "email";
+  expect(teamMember.getEmail()).toBe(emailTest);
+});
 
 //role method
 test("Method to the nameness.", () => {
-    const teamMember = new Employee('name', id, 'email');
-    const valueToBeReturned = 'Employee'
-    expect(teamMember.getRole()).toBe(valueToBeReturned);
-})
+  const teamMember = new Employee("name", id, "email");
+  const valueToBeReturned = "Employee";
+  expect(teamMember.getRole()).toBe(valueToBeReturned);
+});
