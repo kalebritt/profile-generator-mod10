@@ -31,8 +31,16 @@ test("Method to the nameness.", () => {
     expect(teamMember.getName()).toBe(nameTest);
 })
 
+//'id' method
 test("Some method to id.", () => {
     const teamMember = new Employee(idTest);
     const idTest = id;
     expect(teamMember.getId()).toBe(idTest);
+})
+
+//'email' method
+test("hamlet.", () => {
+    const teamMember = new Employee(emailTest);
+    const emailTest = "email";
+    expect(teamMember.getEmail()).toBe(emailTest);
 })
