@@ -44,3 +44,10 @@ test("hamlet.", () => {
     const emailTest = "email";
     expect(teamMember.getEmail()).toBe(emailTest);
 })
+
+//role method
+test("Method to the nameness.", () => {
+    const teamMember = new Employee('name', id, 'email');
+    const valueToBeReturned = 'Employee'
+    expect(teamMember.getRole()).toBe(valueToBeReturned);
+})
