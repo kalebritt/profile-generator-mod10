@@ -45,8 +45,8 @@ test("hamlet.", () => {
   expect(teamMember.getEmail()).toBe(emailTest);
 });
 
-//role method
-test("Method to the nameness.", () => {
+//'role' method
+test("rolling method.", () => {
   const teamMember = new Employee("name", id, "email");
   const valueToBeReturned = "Employee";
   expect(teamMember.getRole()).toBe(valueToBeReturned);
