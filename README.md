@@ -7,7 +7,7 @@ Use this handy-dandy app to easily create and modify your team composed of a man
 
 --link to video--
 
-Table of Contents
+[Table of Contents] Table of Contents
 Installation
 Usage
 Credits
