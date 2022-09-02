@@ -13,14 +13,14 @@ Use this handy-dandy app to easily create and modify your team composed of a man
 - [License] (#license)
 - [Installation] (#installation)
 
-## Usage
+# Usage
 Below is a screenshot of the deployed app.>
 
 ![alt text](screenshot here)
 
-## Credits
+# Credits
 I'd like to thank the all-knowing Jude C. for her as always tremendous assistance without which this project would have been exceedingly more difficult and time consuming!
 
-## License
+# License
 
-## Installation 
+# Installation 
