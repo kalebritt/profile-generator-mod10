@@ -8,19 +8,24 @@ Use this handy-dandy app to easily create and modify your team composed of a man
 --link to video--
 
 ## Table of Contents
+
 - [Usage] (#usage)
 - [Credits] (#credits)
 - [License] (#license)
 - [Installation] (#installation)
 
 # Usage
+```md
 Below is a screenshot of the deployed app.>
 
 ![alt text](screenshot here)
 
 # Credits
+```md
 I'd like to thank the all-knowing Jude C. for her as always tremendous assistance without which this project would have been exceedingly more difficult and time consuming!
 
 # License
+```md
 
 # Installation 
+```md
