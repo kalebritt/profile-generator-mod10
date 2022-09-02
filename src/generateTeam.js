@@ -1,5 +1,5 @@
 const generateTeam = (employeeArray) => {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -23,14 +23,14 @@ const generateTeam = (employeeArray) => {
     
     <div class="card employee-card">
         <div class="card-header bg-primary text-white">
-            <h2 class="card-title">Name</h2>
-            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+            <h2 class="card-title">${manager.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: </li>
-                <li class="list-group-item">Email: <a href="mailto:">email</a></li>
-                <li class="list-group-item">Office number: </li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                <li class="list-group-item">Office number:${manager.getOfficeNumber()} </li>
             </ul>
         </div>
     </div>
@@ -65,7 +65,7 @@ const generateTeam = (employeeArray) => {
         
     
     </body>
-    </html>`
-}
+    </html>`;
+};
 
 module.exports = generateTeam;
