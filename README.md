@@ -15,9 +15,9 @@ Use this handy-dandy app to easily create and modify your team composed of a man
 - [Installation](#installation)
 
 # Usage
-Below is a screenshot of the deployed app.>
+Below is a screenshot of the deployed app.
 
-![alt text](screenshot here)
+![alt text](/assets/Screenshot%20profile-generator-mod10.png)
 
 # Credits
 I'd like to thank the all-knowing Jude C. for her as always tremendous assistance without which this project would have been exceedingly more difficult and time consuming!
