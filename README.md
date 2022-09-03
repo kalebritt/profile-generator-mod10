@@ -21,7 +21,7 @@ Below is a screenshot of the deployed app.
 
 As well as a screenshot of the app in action in VS code.
 
-![app in action on VS code](/assets/profile-gen-mod10-recording.webm)
+![app in action on VS code](/assets/profile-generator-mod10-vscode.png)
 
 # Credits
 I'd like to thank the all-knowing Jude C. for her as always tremendous assistance without which this project would have been exceedingly more difficult and time consuming!
