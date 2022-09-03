@@ -3,7 +3,7 @@
 [Team Generator] (https://kalebritt.github.io/)profile-generator-mod10
 
 ## Description
-Use this handy-dandy app to easily create and modify your team composed of a manager, engineer, and intern.  Features included are email address, office number, github profile, and school for each respective team member.  Click on the link below to see the app in action!
+Use this handy-dandy app to easily create and modify your team! Composed of a manager, engineer, and intern, our features include email address, office number, github profile, and school for each respective team member.  Click on the link below to see the app in action!
 
 --link to video--
 
@@ -24,4 +24,6 @@ I'd like to thank the all-knowing Jude C. for her as always tremendous assistanc
 
 # License
 
+
 # Installation 
+Ain't no installation process here.  This is just for fun!
