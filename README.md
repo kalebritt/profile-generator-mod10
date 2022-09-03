@@ -17,7 +17,11 @@ Use this handy-dandy app to easily create and modify your team! Composed of a ma
 # Usage
 Below is a screenshot of the deployed app.
 
-![alt text](/assets/Screenshot%20profile-generator-mod10.png)
+![screenshot of app deployed](/assets/Screenshot%20profile-generator-mod10.png)
+
+As well as a screenshot of the app in action in VS code.
+
+![app in action on VS code](/assets/)
 
 # Credits
 I'd like to thank the all-knowing Jude C. for her as always tremendous assistance without which this project would have been exceedingly more difficult and time consuming!
